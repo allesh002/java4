@@ -1,14 +1,18 @@
 package com.intellekta.mavenlearn;
 
+import java.util.List;
+
 public class Viewer {
     private String nickname;
     private int age;
     private int countOfFilms;
+    private List<Viewer> filmsSeen;
 
-    public Viewer(String nickname, int age, int countOfFilms) {
+    public Viewer(String nickname, int age, List<Viewer> filmsSeen) {
         this.nickname = nickname;
         this.age = age;
-        this.countOfFilms = countOfFilms;
+        this.filmsSeen=filmsSeen;
+        this.countOfFilms = filmsSeen.size();
     }
 
 
@@ -28,11 +32,11 @@ public class Viewer {
         this.age = age;
     }
 
-    public int getCountOfFilms() {
-        return countOfFilms;
+    public List<Viewer> getFilmsSeen() {
+        return filmsSeen;
     }
 
-    public void setCountOfFilms(int countOfFilms) {
-        this.countOfFilms = countOfFilms;
+    public void setFilmsSeen(List<Viewer> filmsSeen) {
+        this.filmsSeen = filmsSeen;
     }
 }

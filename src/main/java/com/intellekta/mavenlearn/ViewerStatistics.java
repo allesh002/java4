@@ -9,6 +9,6 @@ public class ViewerStatistics {
         for (Viewer pers : list) {
             res += pers.getAge();
         }
-        return res;
+        return res/list.size();
     }
 }
